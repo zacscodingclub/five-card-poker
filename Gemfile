@@ -17,6 +17,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'ruby-poker'
+gem 'bootstrap', '~> 4.0.0.beta'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'rspec-rails'
