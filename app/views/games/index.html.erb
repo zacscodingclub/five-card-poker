@@ -1,0 +1,7 @@
+<h2>
+  There are <%= @games.size %> previous games
+</h2>
+
+<% @games.all.each do |game| %>
+  <%= link_to game.name, game %>
+<% end %>
