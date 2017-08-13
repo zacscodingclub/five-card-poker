@@ -1,24 +1,27 @@
-# README
+# Five Card Poker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://github.com/robolson/ruby-poker/blob/master/examples/deck.rb
 
-Things you may want to cover:
+## Basic Code Example for 2 Players
+```ruby
+@cards = []
 
-* Ruby version
+Card::SUITS.each_byte do |suit|
+  Card::FACES[1..-1].each_byte do |face|
+    @cards.push(Card.new(face.chr, suit.chr))
+  end
+end
 
-* System dependencies
+def shuffle
+  @cards = @cards.sort_by { rand }
+end
 
-* Configuration
+hands = [[], []]
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+def deal
+  5.times do
+    hands[0] << @cards.pop
+    hands[1] << @cards.pop
+  end
+end
+```
