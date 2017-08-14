@@ -1,0 +1,9 @@
+<h1><%= @game.name %>'s Game, # <%= @game.id %></h1>
+
+<ul>
+  <% @game.players.each do |p| %>
+    <li>
+      <%= p.name %>
+    </li>
+  <% end %>
+</ul>
