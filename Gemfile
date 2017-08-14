@@ -21,7 +21,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
 end
 
 group :development do
