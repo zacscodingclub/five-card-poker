@@ -1,7 +1,11 @@
 <h2>
   There are <%= @games.size %> previous games
 </h2>
+<ul>
+  <% @games.all.each do |game| %>
+    <li>
+      <span><%= link_to game.name, game %></span> - <%= game.players.map { |p| p.name }.join(', ') %>
+    </li>
 
-<% @games.all.each do |game| %>
-  <%= link_to game.name, game %>
-<% end %>
+  <% end %>
+</ul>

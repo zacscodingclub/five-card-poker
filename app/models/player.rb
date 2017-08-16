@@ -4,13 +4,11 @@ class Player < ApplicationRecord
 
   validates :name, presence: true
 
-  # Test
   def current_hand
     hands.last
   end
 
-  # Test
   def current_hand_rank
-    hands.last.to_poker_hand.rank
+    current_hand.to_poker_hand.rank
   end
 end

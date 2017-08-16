@@ -16,8 +16,8 @@
       <%= f.label :name, "Name of Game" %> Try to make it unique so we can find your game later!
       <%= f.text_field :name, class:"form-control" %><br>
     </div>
+    <% id = 1 %>
     <%= f.fields_for :players do |player_form| %>
-      <% id = 1 %>
       <div class="form-group">
         <%= player_form.label :name, "Player #{id} Name" %>
         <%= player_form.text_field :name,  class:"form-control" %>
