@@ -1,9 +1,9 @@
 module GamesHelper
   SUITS = {
-    "d" => { "name":"diams", "color":"red" },
-    "c" => { "name":"clubs", "color":"black" },
-    "h" => { "name":"hearts", "color":"red" },
-    "s" => { "name":"spades", "color":"black" }
+    "D" => { "name":"diams", "color":"red" },
+    "C" => { "name":"clubs", "color":"black" },
+    "H" => { "name":"hearts", "color":"red" },
+    "S" => { "name":"spades", "color":"black" }
   }
 
   def display_player(player)
@@ -22,7 +22,7 @@ module GamesHelper
   def display_hand(hand)
     html = ""
 
-    hand.just_cards.each do |card|
+    hand.format_cards.each do |card|
       value, suit = card.split('')
 
       html += <<-HTML

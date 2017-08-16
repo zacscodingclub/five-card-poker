@@ -1,5 +1,5 @@
 <div class="text-center">
-  <h1><%= @game.name %>'s Game, # <%= @game.id %></h1>
+  <h1><%= @game.name %>'s Poker Game</h1>
   <div class="main">
     <div class="table">
       <div class="board">
@@ -12,11 +12,11 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="results">
     <div class="winner">
       <%= @game.winner.name %> Won with <%= @game.winner.current_hand_rank %>!
     </div>
+    <%= link_to "Deal Another Hand?", game_hands_path(@game), class:"btn btn-success btn-lg", method: :post %>
   </div>
-
-  <%= link_to "Deal Another Hand?", game_hands_path(@game), class:"btn btn-success btn-lg", method: :post %>
-
 </div>
